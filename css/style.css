@@ -1,0 +1,9 @@
+p, h3 {
+    font-family: 'Lato', sans-serif;
+	text-align: center;
+	padding: 20px 0 20px 0;
+}
+.landing:hover {
+	opacity: 0.6;
+	cursor: pointer;
+}
