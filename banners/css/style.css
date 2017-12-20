@@ -1,0 +1,130 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.banner {
+    width: 298px;
+    height: 597px;
+    border: 1px solid darkgrey;
+    overflow: hidden;
+    background: rgba(189,237,255,1);
+    background: -moz-linear-gradient(top, rgba(189,237,255,1) 0%, rgba(189,237,255,1) 15%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(189,237,255,1) 0%, rgba(189,237,255,1) 15%, rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(top, rgba(189,237,255,1) 0%, rgba(189,237,255,1) 15%, rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(top, rgba(189,237,255,1) 0%, rgba(189,237,255,1) 15%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(to bottom, rgba(189,237,255,1) 0%, rgba(189,237,255,1) 15%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bdedff', endColorstr='#ffffff', GradientType=0 );
+    cursor: pointer;
+}
+
+p {
+    font-weight: bold;
+    color: #fff;
+    font-size: 27px;
+    display: none;
+    text-align: center;
+    line-height: 58px;
+    font-style: italic;
+    opacity: 0;
+}
+
+
+.sea {
+    position: relative;
+    background: #2497c6;
+    width: 400px;
+    height: 105px;
+    top: 70px;
+    left: 0px;
+}
+.sea-3 {
+    position: relative;
+    background: url(../img/sea3.png) center center no-repeat;
+    width: 389px;
+    height: 105px;
+    top: 337px;
+    left: 0px;
+    opacity: 0.8;
+}
+
+.sea-2 {
+    position: relative;
+    background: url(../img/sea2.png) center center no-repeat;
+    width: 400px;
+    height: 105px;
+    top: 276px;
+    left: 0px;
+}
+
+.sea-1 {
+    position: relative;
+    background: url(../img/sea1.png) center center no-repeat;
+    width: 322px;
+    height: 105px;
+    top: -102px;
+    left: 0px;
+}
+
+
+.submarine {
+    position: relative;
+    background: url(../img/submarine.png) center center no-repeat;
+    width: 212px;
+    height: 212px;
+    top: 215px;
+    left: 0px;
+}
+
+.cloud {
+    position: relative;
+    background: url(../img/cloud_sale.png) center center no-repeat;
+    width: 150px;
+    height: 85px;
+    top: -617px;
+    left: -150px;
+}
+.cloud-2 {
+    position: relative;
+    background: url(../img/cloud_2.png) center center no-repeat;
+    width: 150px;
+    height: 85px;
+    top: -650px;
+    left: -170px;
+    opacity: 0.7;
+}
+
+.cloud h4 {
+    text-align: center;
+    line-height: 108px;
+    color: #ff0000;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.sale {
+    text-align: center;
+    line-height: 30px;
+    color: #141a65;
+    background-color: #f3f3f3;
+    top: 247px;
+    left: 138px;
+    width: 150px;
+    height: 107px;
+    font-size: 22px;
+    position: absolute;
+    border-radius: 152px;
+    padding-top: 48px;
+    -webkit-box-shadow: 3px -3px 3px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 3px -3px 3px 0px rgba(0,0,0,0.5);
+    box-shadow: 3px -3px 3px 0px rgba(0,0,0,0.5);
+    opacity: 0;
+}
+
+.logo{
+    bottom: 100px;
+    left: 40px;
+    width: 96px;
+    height: 40px;
+    position: absolute;
+    background: url(../img/logo.png) center center no-repeat;
+}
