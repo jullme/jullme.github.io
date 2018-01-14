@@ -1,0 +1,44 @@
+$color-white: #fff;
+$color-grey-light: #f6f5f5;
+$color-grey: #d3d3d3;
+$color-red: #ff0000;
+$color-red-dark: #b72020;
+
+$color-primary: #fc5095;
+$color-primary-dark: #70485c;
+
+$color-secondary: #fcc150;
+$color-secondary-dark: #958463;
+
+$color-tertiary: #1da7c0;
+$color-tertiary-dark: #437c87;
+
+$color-text: #3b3b3b;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+
+    @include respond(tab-land) {
+        font-size: 50%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 45%;
+    }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}

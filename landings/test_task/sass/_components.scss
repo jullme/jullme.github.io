@@ -1,0 +1,526 @@
+.container {
+  display: flex;
+  flex-direction: row;
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+}
+
+.background {
+  background-image: url(../img/girl.png);
+  background-size: cover;
+  min-height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  .result {
+    display: none;
+    margin: auto;
+    z-index: 30;
+
+    span {
+      font-size: 24.7rem;
+      color: $color-white;
+      font-weight: 800;
+      letter-spacing: 1px;
+      line-height: 26.9rem;
+
+      @include respond(tab-land) {
+        font-size: 15rem;
+      }
+    }
+    p {
+      font-size: 4.2rem;
+      color: $color-white;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+      @include respond(tab-land) {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &--yellow {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color-secondary,.7);
+    z-index: 1;
+  }
+
+}
+
+.navigation {
+  background: rgba($color-white, .74);
+  z-index: 10;
+
+  .nav {
+    display: flex;
+    list-style: none;
+    padding: 0 12rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &--second-step {
+      padding: 0 17.4rem;
+      .nav__item {
+        padding: 1rem 0;
+      }
+    }
+
+    &__item {
+      display: inline-block;
+      padding: 2.2rem 0;
+    }
+
+    &__link:link, &__link:visited {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: $color-text;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.sidebar {
+  background: $color-white;
+  flex: 0 0 25vw;
+  border-left: 1.3rem solid $color-primary;
+  border-top: 22.3rem solid $color-primary;
+  background: $color-white;
+  z-index: 20;
+
+  -webkit-box-shadow: -70px 0px 190px 0px rgba($color-primary-dark,.4);
+  -moz-box-shadow: -70px 0px 190px 0px rgba($color-primary-dark,.4);
+  box-shadow: -70px 0px 190px 0px rgba($color-primary-dark,.4);
+
+  @include animationTransition;
+
+  @include respond(phone) {
+    border: none;
+    box-shadow: none;
+    padding-top: 15rem;
+    margin-top: 0;
+  }
+
+  &--second-step {
+    flex: 0 0 44vw;
+    border-left: 1.3rem solid $color-secondary;
+    border-top: 22.3rem solid $color-secondary;
+    background: $color-grey-light;
+
+    @include respond(phone) {
+      border: none;
+      box-shadow: none;
+      padding-top: 15rem;
+      padding-bottom: 10rem;
+      margin-top: 0;
+    }
+
+    -webkit-box-shadow: -70px 0px 190px 0px rgba($color-secondary-dark,.4);
+    -moz-box-shadow: -70px 0px 190px 0px rgba($color-secondary-dark,.4);
+    box-shadow: -70px 0px 190px 0px rgba($color-secondary-dark,.4);
+  }
+
+  &--third-step {
+    flex: 0 0 44vw;
+    border-left: 1.3rem solid $color-tertiary;
+    border-top: 22.3rem solid $color-tertiary;
+    background: $color-grey-light;
+
+    @include respond(phone) {
+      border: none;
+      box-shadow: none;
+      padding-top: 15rem;
+      margin-top: 0;
+    }
+
+    -webkit-box-shadow: -70px 0px 190px 0px rgba($color-tertiary-dark,.4);
+    -moz-box-shadow: -70px 0px 190px 0px rgba($color-tertiary-dark,.4);
+    box-shadow: -70px 0px 190px 0px rgba($color-tertiary-dark,.4);
+  }
+
+  &__heart-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 9px solid $color-primary;
+    background: $color-white;
+    margin-top: 8.8rem;
+    margin-left: -4.8rem;
+
+    @include respond(phone) {
+      display: none;
+    }
+
+    svg {
+      margin: 17px 12px;
+
+      .heart-first {
+        @include animationTransition;
+        fill: $color-primary;
+      }
+      .heart-second {
+        @include animationTransition;
+        fill: $color-secondary;
+      }
+      .heart-third {
+        @include animationTransition;
+        fill: $color-tertiary;
+      }
+    }
+
+    @include animationTransition;
+
+    &--second-step {
+      border: 9px solid $color-secondary;
+    }
+
+    &--third-step {
+      border: 9px solid $color-tertiary;
+    }
+  }
+
+  &__container-first {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 18.2vw;
+    margin-left: 6rem;
+    margin-top: -6.5rem;
+
+    h3 {
+      color: $color-primary;
+      font-size: 3.1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding-bottom: 1.5rem;
+      letter-spacing: 2px;
+    }
+
+    p {
+      color: $color-text;
+      font-size: 2.4rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 2.9rem;
+      padding-bottom: 15.5rem;
+      padding-left: 2px;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      color: $color-text;
+      font-size: 3.4rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding-bottom: 1.8rem;
+      padding-left: 2px;
+      letter-spacing: 2px;
+    }
+
+    .btn-first,
+    .btn-first:link,
+    .btn-first:visited {
+      width: 27.5rem;
+      height: 8rem;
+      background-color: $color-primary;
+      color: $color-white;
+      font-size: 3.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 2rem;
+      text-align: center;
+      line-height: 7.3rem;
+      letter-spacing: 2px;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      text-decoration: none;
+      margin-left: 1px;
+    }
+  }
+
+  &__container-second {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 18.2vw;
+    margin-left: 6rem;
+    margin-top: -6rem;
+
+    h3 {
+      color: $color-secondary;
+      font-size: 3.1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 9.4rem;
+      letter-spacing: 2px;
+      margin-left: 4px;
+    }
+  }
+
+  &__container-third {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 55rem;
+    margin-left: 6.5rem;
+    margin-top: -7.8rem;
+
+    h3 {
+      color: $color-tertiary;
+      font-size: 3.1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 3.9rem;
+    }
+  }
+}
+
+.first-form {
+  position: relative;
+
+  &__group {
+    &:first-child {
+      margin-bottom: 9.7rem;
+    }
+
+    .btn-second,
+    .btn-second:link,
+    .btn-second:visited {
+      display: none;
+      width: 28.3rem;
+      height: 8rem;
+      background-color: #fcc150;
+      color: #fff;
+      font-size: 2.6rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 2rem;
+      text-align: center;
+      line-height: 7.8rem;
+      letter-spacing: 2px;
+      cursor: pointer;
+      margin-top: 25.8rem;
+      margin-left: 4.8rem;
+      border: 1px solid $color-grey;
+      outline: none;
+      text-decoration: none;
+    }
+  }
+
+  &__radio-group {
+    position: relative;
+  }
+
+  &__radio-input {
+    display: none;
+  }
+
+  &__radio-label {
+    font-size: 2.6rem;
+    cursor: pointer;
+    position: relative;
+    color: $color-text;
+    letter-spacing: 1px;
+  }
+
+  &__radio-button {
+    height: 8rem;
+    width: 38.4rem;
+    border: 1px solid $color-grey;
+    border-radius: 1rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: right;
+    line-height: 3;
+    margin-left: 5px;
+    font-weight: 600;
+    padding-right: 11.3rem;
+
+    &--boy {
+      background: url(../img/icon-boy.png) 7.1rem 1.3rem no-repeat $color-white;
+    }
+
+    &--girl {
+      background: url(../img/icon-girl.png) 6.9rem 1.4rem no-repeat $color-white;
+    }
+  }
+
+  &__radio-input:checked ~ &__radio-label &__radio-button {
+    background-color: $color-secondary;
+  }
+  &__radio-input:checked ~ &__radio-label {
+    color: $color-white;
+  }
+}
+
+.second-form {
+  position: relative;
+  margin-top: 2.1rem;
+  margin-left: 1px;
+
+  &__label {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $color-text;
+    margin-bottom: 2px;
+    margin-left: 3px;
+
+    &:last-child {
+      display: inline-block;
+      font-size: 1.3rem;
+      max-width: 42rem;
+      margin-top: -0.5rem;
+    }
+  }
+
+  &__group {
+    &--radio {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 8.9rem;
+    }
+    &--acceptance {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 1.7rem;
+    }
+
+    .btn-third,
+    .btn-third:active,
+    .btn-third:focus {
+      width: 28.4rem;
+      height: 8rem;
+      background-color: $color-white;
+      color: #aaa9a9;
+      font-size: 2.6rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 2rem;
+      text-align: center;
+      line-height: 7.8rem;
+      letter-spacing: 3px;
+      margin-top: 1rem;
+      margin-left: 4px;
+      border: 1px solid $color-tertiary;
+      outline: none;
+      cursor: not-allowed;
+
+      &.valid {
+        cursor: pointer;
+        border: 1px solid $color-grey;
+        color: $color-white;
+        background-color: $color-tertiary;
+      }
+
+      &.invalid {
+        cursor: not-allowed;
+        border: 1px solid $color-tertiary;
+        color: #aaa9a9;
+        background-color: $color-white;
+      }
+    }
+  }
+
+  &__input {
+    color: $color-text;
+    letter-spacing: 1px;
+    padding-left: 1rem;
+    font-size: 1.8rem;
+
+    &:not(#acceptance) {
+      width: 45.6rem;
+      height: 8rem;
+      border: 1px solid $color-grey;
+      border-radius: 1rem;
+      outline: none;
+      margin: 0 0 0.6rem 0;
+    }
+    &#acceptance {
+      margin-right: 1rem;
+
+      &.valid ~ label {
+        color: $color-text;
+      }
+      &.invalid ~ label {
+        color: $color-red;
+      }
+    }
+
+    &.valid {
+      border: 1px solid $color-grey !important;
+      color: $color-text;
+    }
+
+    &.invalid {
+      border: 1px solid $color-red !important;
+      color: $color-red;
+    }
+    &::-webkit-input-placeholder {
+      color: $color-red-dark;
+    }
+  }
+
+  &__radio-group {
+    margin-right: 23rem;
+  }
+
+  &__radio-input {
+    display: none;
+
+  }
+
+  &__radio-label {
+    cursor: pointer;
+    position: relative;
+    color: $color-text;
+  }
+
+  &__radio-button {
+    height: 8rem;
+    width: 22.1rem;
+    border: 1px solid $color-grey;
+    border-radius: 1rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: right;
+    padding-right: 2.5rem;
+    line-height: 7.9rem;
+    font-size: 2.4rem;
+    margin-left: -3px;
+    margin-top: 1px;
+
+    &--boy {
+      background: url(../img/icon-boy-small.png) 3.1rem center no-repeat $color-white;
+    }
+
+    &--girl {
+      background: url(../img/icon-girl-small.png) 2.9rem center no-repeat $color-white;
+      margin-left: 3px;
+    }
+  }
+
+  &__radio-input:checked ~ &__radio-label &__radio-button {
+    background-color: $color-tertiary;
+  }
+  &__radio-input:checked ~ &__radio-label {
+    color: $color-white;
+  }
+}

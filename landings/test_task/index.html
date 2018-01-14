@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        
+        <title>Genesis test task</title>
+    </head>
+    <body>
+        <div class="container">
+            <div id="background" class="background">
+                <div id="result" class="result"></div>
+                <nav class="navigation">
+                    <ul id="nav" class="nav">
+                        <li class="nav__item"><a href="#" class="nav__link">название1</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">название2</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">название3</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">название4</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">очень длинное название5</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">очень очень длинное название6</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">длинное название7</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">длинное название8</a></li>
+                    </ul>
+                </nav>
+                <div id="yellow-block" class="background--yellow"></div>
+            </div>
+            <div id="sidebar" class="sidebar">
+                <div id="heart_icon" class="sidebar__heart-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         width="0.528in" height="0.444in">
+                        <path id="heart" class="heart-first" fill-rule="evenodd"  fill="rgb(252, 80, 149)"
+                              d="M19.000,32.000 C15.269,32.033 11.423,27.255 7.000,22.000 C3.361,17.677 -0.085,13.019 -0.000,10.000 C0.187,3.313 3.813,-0.062 9.000,-0.000 C14.188,0.063 18.188,6.000 19.000,6.000 C19.812,6.000 23.750,-0.062 29.000,-0.000 C34.250,0.063 38.000,4.063 38.000,10.000 C38.000,12.722 34.701,17.538 31.000,22.000 C26.627,27.273 22.823,31.966 19.000,32.000 Z"/>
+                    </svg>
+                </div>
+                <div id="first-step" class="sidebar__container-first">
+                    <h3>Lorem ipsum</h3>
+                    <p>Mauris vel nisi ac orci placerat semper. Aenean sapien massa.</p>
+                    <h1>Lorem Ipsum?</h1>
+                    <a href="#second-step" id="button_first" class="btn btn-first">Начать</a>
+                </div>
+                <div id="second-step" class="sidebar__container-second">
+                    <h3>Lorem ipsum</h3>
+                    <form action="#" class="first-form">
+                        <div class="first-form__group">
+                            <div class="first-form__radio-group">
+                                <input id="boy" type="radio" class="first-form__radio-input" name="second-step">
+                                <label for="boy" class="first-form__radio-label">
+                                    <span id="boy-button" class="first-form__radio-button first-form__radio-button--boy">Вариант А</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="first-form__group">
+                            <div class="first-form__radio-group">
+                                <input id="girl" type="radio" class="first-form__radio-input" name="second-step">
+                                <label for="girl" class="first-form__radio-label">
+                                    <span id="girl-button" class="first-form__radio-button first-form__radio-button--girl">Вариант Б</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="first-form__group">
+                            <a href="#third-step" id="button_second" class="btn btn-second">Продолжить</a>
+                        </div>
+                    </form>
+                </div>
+                <div id="third-step" class="sidebar__container-third">
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </h3>
+                    <form action="#" class="second-form" id="second-form">
+                        <label class="second-form__label">Я ищу:
+                            <div class="second-form__group--radio">
+                                <div class="second-form__radio-group">
+                                    <input id="second-boy" type="radio" class="second-form__radio-input" name="third-step" checked>
+                                    <label for="second-boy" class="second-form__radio-label">
+                                        <span id="second-boy-button" class="second-form__radio-button second-form__radio-button--boy">Вариант 1</span>
+                                    </label>
+                                </div>
+                                <div class="second-form__radio-group">
+                                    <input id="second-girl" type="radio" class="second-form__radio-input" name="third-step">
+                                    <label for="second-girl" class="second-form__radio-label">
+                                        <span id="second-girl-button" class="second-form__radio-button second-form__radio-button--girl">Вариант 2</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </label>
+                        <div class="second-form__group">
+                            <label for="name" class="second-form__label">Ваше имя:</label>
+                            <input type="text" class="second-form__input" id="name" value="" required>
+                        </div>
+                        <div class="second-form__group">
+                            <label for="email" class="second-form__label">Email:</label>
+                            <input type="email" class="second-form__input" id="email" value="" required>
+                        </div>
+                        <div class="second-form__group">
+                            <label for="password" class="second-form__label">Придумайте пароль:</label>
+                            <input type="password" class="second-form__input" id="password" value="" required>
+                        </div>
+                        <div class="second-form__group second-form__group--acceptance">
+                            <input type="checkbox" class="second-form__input" id="acceptance" checked required>
+                            <label for="acceptance" class="second-form__label">Регистрируясь, вы подтверждаете, что вам уже исполнилось 18 лет и вы ознакомились с условиями пользования сайтом.
+                            </label>
+                        </div>
+                        <div class="second-form__group">
+                            <button id="button_third" type="submit" class="btn btn-third">Продолжить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="js/code.js" type="text/javascript"></script>
+    </body>
+</html>
